@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* fonts */
+  --ff-primary: 'Oswald', sans-serif;
+  --ff-secondary: 'Quicksand', sans-serif;
+  /* colors */
+  --clr-base: #191724;
+  --clr-surface: #1f1d2e;
+  --clr-overlay: #26233a;
+  --clr-text: #e0def4;
+  --clr-love: #eb6f92;
+  --clr-gold: #f6c177;
+  --clr-rose: #ebbcba;
+  --clr-pine: #31748f;
+  --clr-foam: #9ccfd8;
+  --clr-iris: #c4a7e7;
+  --clr-hl-high: #524f67;
+  /* transition */
+  --tr-gentle: ease-in 250ms all;
+}
+
+body {
+  color: var(--clr-text);
+  font-family: var(--ff-secondary);
+  background-color: var(--clr-base);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-primary);
+}
+
+a {
+  color: var(--clr-iris);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header {
+  max-width: 77.25rem;
+  height: 120px;
+  position: relative;
+  display: flex;
+  gap: 9.375rem;
+  justify-content: flex-end;
+  padding-inline: 23.875rem 1.25rem;
+  border: 3px solid var(--clr-hl-high);
+  border-radius: 1rem;
+  margin-block: 3.75rem;
+  margin-inline: auto;
+}
+
+.header__logo-container {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-text);
+  width: 24.0625rem;
+  height: 7.5rem;
+  padding-inline: 1.25rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.header__logo-container::before {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  content: '';
+  width: 0.3125rem;
+  height: 7.5rem;
+  background-color: var(--clr-base);
+}
+
+.header__logo {
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav__list {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  padding: 0.3125rem 0.9375rem;
+  border-radius: 0.3125rem;
+  transition: var(--tr-gentle);
+}
+
+.nav__link:hover {
+  text-decoration: none;
+  background-color: var(--clr-surface);
+}
+
+.nav__link-btn {
+  display: inline-flex;
+  background-color: var(--clr-surface);
+  padding: 0.625rem 1.875rem;
+  border: 1px solid var(--clr-hl-high);
+  border-radius: 0.3125rem;
+  margin-block: auto;
+  transition: var(--tr-gentle);
+}
+
+.nav__link-btn:hover {
+  background-color: var(--clr-overlay);
+  /* border-color: var(--clr-overlay); */
+  text-decoration: none;
+}
