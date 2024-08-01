@@ -79,18 +79,33 @@
     </header>
     <main>
       <!-- Hero Section -->
-      <section aria-labelledby="heroTitle">
+      <section class="hero" aria-labelledby="heroTitle">
         <!-- Content -->
-        <div>
-          <p>Web Developer</p>
-          <h1 id="heroTitle">Erel Japco</h1>
-          <p>
+        <div class="hero__content">
+          <p class="hero__subtitle">Web Developer</p>
+          <h1 class="hero__title" id="heroTitle">Erel<br />Japco</h1>
+          <p class="hero__copy">
             An ambitious web developer with a knack for continuous learning.
           </p>
-          <a href="#projects">View Projects</a>
+          <a class="link-btn link-btn--primary" href="#projects">
+            <svg
+              class="link-btn__icon"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="30" cy="30" r="30" />
+              <path
+                d="M38 28.2679C39.3333 29.0377 39.3333 30.9623 38 31.7321L27.5 37.7942C26.1667 38.564 24.5 37.6018 24.5 36.0622L24.5 23.9378C24.5 22.3982 26.1667 21.436 27.5 22.2058L38 28.2679Z"
+              />
+            </svg>
+            View Projects</a
+          >
         </div>
         <!-- Illustration -->
-        <div>
+        <div class="hero__illustration-container">
           <svg
             width="730"
             height="531"
