@@ -265,3 +265,68 @@ ul {
 .about__copy {
   line-height: 1.25;
 }
+
+.skills {
+  margin-bottom: 8.75rem;
+}
+
+.skills__title {
+  font-size: 3.125rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.skills__grid {
+  max-width: 49.125rem;
+  display: flex;
+  gap: 1.125rem;
+  flex-wrap: wrap;
+  margin-inline: auto;
+}
+
+.skill {
+  width: calc((100% - 2.25rem) / 3);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--clr-hl-high);
+  border-radius: var(--br-s);
+  transition: var(--tr-gentle);
+}
+
+.skill svg {
+  height: 30%;
+  fill: var(--clr-text);
+}
+
+.skill svg g {
+  fill: var(--clr-text);
+}
+
+.skill:hover {
+  background-color: var(--clr-overlay);
+  border-color: var(--clr-overlay);
+}
+
+.skill:nth-of-type(1):hover svg,
+.skill:nth-of-type(6):hover svg g,
+.skill:nth-of-type(8):hover svg {
+  fill: var(--clr-foam);
+}
+
+.skill:nth-of-type(2):hover svg,
+.skill:nth-of-type(4):hover svg,
+.skill:nth-of-type(9):hover svg {
+  fill: var(--clr-rose);
+}
+
+.skill:nth-of-type(3):hover svg,
+.skill:nth-of-type(5):hover svg,
+.skill:nth-of-type(7):hover svg {
+  fill: var(--clr-iris);
+}
