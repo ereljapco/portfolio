@@ -540,16 +540,18 @@
         </div>
       </section>
       <!-- Projects -->
-      <section id="projects" aria-labelledby="projectsTitle">
-        <h2 id="projectsTitle">Projects</h2>
+      <section class="projects" id="projects" aria-labelledby="projectsTitle">
+        <h2 class="projects__title" id="projectsTitle">Projects</h2>
         <!-- Featured Projects Container -->
-        <div>
+        <div class="projects__container">
           <!-- Featured Project 1 -->
-          <article aria-labelledby="project1Title">
-            <div>
-              <p><span>01</span> Resort Booking Exercise</p>
+          <article class="project" aria-labelledby="project1Title">
+            <div class="project__subtitle-container">
+              <p class="project__subtitle">
+                <span class="project__num">01</span> ASP.Net Core Web App
+              </p>
               <!-- Project Icon -->
-              <div>
+              <div class="project__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"
@@ -562,52 +564,53 @@
                 </svg>
               </div>
             </div>
-            <div>
+            <!-- Project Image -->
+            <div class="project__img-container img-container">
               <img
+                class="project__img"
                 src="./assets/images/shercon-project.png"
                 alt="Image preview of Shercon website"
               />
             </div>
-            <header>
-              <h3 id="project1Title">Shercon</h3>
-            </header>
-            <p>
+            <h3 class="project__title" id="project1Title">Shercon</h3>
+            <p class="project__copy">
               An accomodation booking platform for Shercon - a resort and
               ecology park.
             </p>
             <!-- Tags -->
-            <ul>
-              <li>.NET Core</li>
-              <li>MSSQL</li>
+            <ul class="project__tags">
+              <li class="project__tag">Angular</li>
+              <li class="project__tag">.NET Core</li>
+              <li class="project__tag">MSSQL</li>
             </ul>
             <!-- Links -->
-            <div>
-              <!-- Hidden on Mobile / Normal View on Desktop -->
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                role="presentation"
-              >
-                <circle cx="30" cy="30" r="30" fill="#E0DEF4" />
-                <path
-                  d="M38 28.2679C39.3333 29.0377 39.3333 30.9623 38 31.7321L27.5 37.7942C26.1667 38.564 24.5 37.6018 24.5 36.0622L24.5 23.9378C24.5 22.3982 26.1667 21.436 27.5 22.2058L38 28.2679Z"
-                  fill="#1F1D2E"
-                />
-              </svg>
-              <!-- Normal View on Mobile / On Hover on Desktop-->
-              <a href="#">View Live</a>
-              <a href="#">Visit Repo</a>
+            <div class="project__links">
+              <a href="#" class="link link--project" title="View Repo"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="link link--project" title="View Live"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"
+                  />
+                </svg>
+              </a>
             </div>
           </article>
           <!-- Featured Project 2 -->
-          <article aria-labelledby="project2Title">
-            <div>
-              <p><span>02</span> Clone Web App</p>
+          <article class="project" aria-labelledby="project2Title">
+            <div class="project__subtitle-container">
+              <p class="project__subtitle">
+                <span class="project__num">02</span> Express App
+              </p>
               <!-- Project Icon -->
-              <div>
+              <div class="project__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -620,96 +623,99 @@
                 </svg>
               </div>
             </div>
-            <div>
+            <!-- Project Image -->
+            <div class="project__img-container img-container">
               <img
+                class="project__img"
                 src="./assets/images/airbnb-project.jpg"
                 alt="Image preview of Shercon website"
               />
             </div>
-            <header>
-              <h3 id="project2Title">Airbnb</h3>
-            </header>
-            <p>Vacation Rentals and more.</p>
+            <h3 class="project__title" id="project2Title">Airbnb</h3>
+            <p class="project__copy">
+              A clone web app for vacation rentals, cabins, and more.
+            </p>
             <!-- Tags -->
-            <ul>
-              <li>NodeJS</li>
-              <li>MongoDB</li>
+            <ul class="project__tags">
+              <li class="project__tag">NodeJS</li>
+              <li class="project__tag">MongoDB</li>
+              <li class="project__tag">Google Maps API</li>
             </ul>
             <!-- Links -->
-            <div>
-              <!-- Hidden on Mobile / Normal View on Desktop -->
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                role="presentation"
-              >
-                <circle cx="30" cy="30" r="30" fill="#E0DEF4" />
-                <path
-                  d="M38 28.2679C39.3333 29.0377 39.3333 30.9623 38 31.7321L27.5 37.7942C26.1667 38.564 24.5 37.6018 24.5 36.0622L24.5 23.9378C24.5 22.3982 26.1667 21.436 27.5 22.2058L38 28.2679Z"
-                  fill="#1F1D2E"
-                />
-              </svg>
-              <!-- Normal View on Mobile / On Hover on Desktop-->
-              <a href="#">View Live</a>
-              <a href="#">Visit Repo</a>
+            <div class="project__links">
+              <a href="#" class="link link--project" title="View Repo"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="link link--project" title="View Live"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"
+                  />
+                </svg>
+              </a>
             </div>
           </article>
           <!-- Featured Project 3 -->
-          <article aria-labelledby="project3Title">
-            <div>
-              <p><span>03</span> Web App</p>
+          <article class="project" aria-labelledby="project3Title">
+            <div class="project__subtitle-container">
+              <p class="project__subtitle">
+                <span class="project__num">03</span> React App
+              </p>
               <!-- Project Icon -->
-              <div>
+              <div class="project__icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 576 512"
+                  viewBox="0 0 512 512"
                   role="presentation"
                 >
                   <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                   <path
-                    d="M234.7 42.7L197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L529.9 116.5c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0L46.1 395.4zM484.6 82.6l-105 105-23.3-23.3 105-105 23.3 23.3zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2z"
+                    d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"
                   />
                 </svg>
               </div>
             </div>
-            <div>
+            <!-- Project Image -->
+            <div class="project__img-container img-container">
               <img
+                class="project__img"
                 src="./assets/images/todo-project.png"
                 alt="Image preview of Todo App"
               />
             </div>
-            <header>
-              <h3 id="project3Title">To Do App</h3>
-            </header>
-            <p>To do list made easy</p>
+            <h3 class="project__title" id="project3Title">To Do App</h3>
+            <p class="project__copy">
+              To do list made easy with drag and drop feature.
+            </p>
             <!-- Tags -->
-            <ul>
-              <li>React</li>
-              <li>BEM</li>
+            <ul class="project__tags">
+              <li class="project__tag">React</li>
+              <li class="project__tag">BEM</li>
             </ul>
             <!-- Links -->
-            <div>
-              <!-- Hidden on Mobile / Normal View on Desktop -->
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                role="presentation"
-              >
-                <circle cx="30" cy="30" r="30" fill="#E0DEF4" />
-                <path
-                  d="M38 28.2679C39.3333 29.0377 39.3333 30.9623 38 31.7321L27.5 37.7942C26.1667 38.564 24.5 37.6018 24.5 36.0622L24.5 23.9378C24.5 22.3982 26.1667 21.436 27.5 22.2058L38 28.2679Z"
-                  fill="#1F1D2E"
-                />
-              </svg>
-              <!-- Normal View on Mobile / On Hover on Desktop-->
-              <a href="#">View Live</a>
-              <a href="#">Visit Repo</a>
+            <div class="project__links">
+              <a href="#" class="link link--project" title="View Repo"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="link link--project" title="View Live"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"
+                  />
+                </svg>
+              </a>
             </div>
           </article>
         </div>
