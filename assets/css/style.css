@@ -24,10 +24,12 @@
   --clr-iris: #c4a7e7;
   --clr-hl-high: #524f67;
   /* border */
+  --border-container: 1px solid var(--clr-hl-high);
   --border-link-absolute: 5px solid var(--clr-base);
   /* border-radius */
   --br-s: 5px;
-  --br-m: 15px;
+  --br-m: 10px;
+  --br-l: 15px;
   /* transition */
   --tr-gentle: ease-in 250ms all;
   --tr-gentle-out: ease-in-out 250ms all;
@@ -197,12 +199,24 @@ ul {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    justify-content: flex-end;
+  }
 }
 
 .nav__list {
   display: flex;
+  flex-direction: column;
   gap: 0.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list {
+    flex-direction: row;
+  }
 }
 
 .nav__link {
@@ -506,6 +520,7 @@ ul {
   border: 1px solid var(--clr-hl-high);
   border-radius: var(--br-m);
   margin-inline: auto;
+  margin-bottom: 4rem;
 }
 
 .contact__title {
@@ -524,6 +539,7 @@ ul {
   bottom: 0;
   transform: translateY(50%);
   border: var(--border-link-absolute);
+  border-radius: var(--br-m);
 }
 
 .contact__link:hover {
@@ -532,4 +548,72 @@ ul {
 
 .contact__link:hover svg {
   transform: translate(0.1rem, -0.1rem);
+}
+
+.footer {
+  position: relative;
+  border: var(--border-container);
+  background-color: var(--clr-surface);
+}
+
+@media screen and (min-width: 1024px) {
+  .footer::before,
+  .footer::after {
+    content: '';
+    position: absolute;
+    top: -115%;
+    width: 6.375rem;
+    height: 10rem;
+    background-color: var(--clr-surface);
+    border: var(--border-container);
+    border-bottom: none;
+  }
+
+  .footer::before {
+    border-left: none;
+    border-top-right-radius: var(--br-l);
+  }
+
+  .footer::after {
+    right: 0;
+    border-right: none;
+    border-top-left-radius: var(--br-l);
+  }
+}
+
+.footer__container {
+  width: 85%;
+  max-width: 72rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 2.5rem;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer .nav__list {
+    gap: 2rem;
+  }
+}
+
+.footer .nav__link {
+  padding-inline: 0;
+}
+
+.footer .nav__link:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.footer__copy {
+  font-size: 0.625rem;
+  line-height: 2;
+  text-transform: uppercase;
 }
