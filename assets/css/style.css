@@ -14,6 +14,7 @@
   --clr-base: #191724;
   --clr-surface: #1f1d2e;
   --clr-overlay: #26233a;
+  --clr-overlay-lt: #302c49;
   --clr-text: #e0def4;
   --clr-love: #eb6f92;
   --clr-gold: #f6c177;
@@ -22,6 +23,8 @@
   --clr-foam: #9ccfd8;
   --clr-iris: #c4a7e7;
   --clr-hl-high: #524f67;
+  /* border */
+  --border-link-absolute: 5px solid var(--clr-base);
   /* border-radius */
   --br-s: 5px;
   --br-m: 15px;
@@ -33,6 +36,7 @@
 
 body {
   color: var(--clr-text);
+  line-height: 1.5;
   font-family: var(--ff-secondary);
   background-color: var(--clr-base);
 }
@@ -364,6 +368,7 @@ ul {
 .projects {
   max-width: 77.25rem;
   margin-inline: auto;
+  margin-bottom: 9.5rem;
 }
 
 .projects__title {
@@ -487,4 +492,44 @@ ul {
 
 .link--project:hover {
   background-color: var(--clr-overlay);
+}
+
+.contact {
+  position: relative;
+  max-width: 70rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-surface);
+  padding-block: 2rem 3.5rem;
+  border: 1px solid var(--clr-hl-high);
+  border-radius: var(--br-m);
+  margin-inline: auto;
+}
+
+.contact__title {
+  font-size: 3.125rem;
+  color: var(--clr-foam);
+}
+
+.contact__copy {
+  width: 80%;
+  max-width: 35rem;
+  text-align: center;
+}
+
+.contact__link {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  border: var(--border-link-absolute);
+}
+
+.contact__link:hover {
+  background-color: var(--clr-overlay-lt);
+}
+
+.contact__link:hover svg {
+  transform: translate(0.1rem, -0.1rem);
 }
