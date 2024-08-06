@@ -22,7 +22,11 @@
   --clr-pine: #31748f;
   --clr-foam: #9ccfd8;
   --clr-iris: #c4a7e7;
+  --clr-hl-low: #21202e;
   --clr-hl-high: #524f67;
+  /* width */
+  --width: 87%;
+  --max-width: 72rem;
   /* border */
   --border-container: 1px solid var(--clr-hl-high);
   --border-link-absolute: 5px solid var(--clr-base);
@@ -64,6 +68,10 @@ img {
 
 ul {
   list-style-type: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 .img-container {
@@ -155,16 +163,18 @@ ul {
 }
 
 .header {
-  max-width: 77.25rem;
-  height: 120px;
+  width: var(--width);
+  max-width: var(--max-width);
+  height: 4.5rem;
   position: relative;
   display: flex;
   gap: 9.375rem;
   justify-content: flex-end;
-  padding-inline: 23.875rem 1.25rem;
+  align-items: center;
+  padding-inline: 1.5rem;
   border: 3px solid var(--clr-hl-high);
   border-radius: 1rem;
-  margin-block: 3.75rem;
+  margin-block: 2rem;
   margin-inline: auto;
 }
 
@@ -175,9 +185,8 @@ ul {
   display: flex;
   align-items: center;
   background-color: var(--clr-text);
-  width: 24.0625rem;
-  height: 7.5rem;
-  padding-inline: 1.25rem;
+  width: 8rem;
+  height: 4.5rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
@@ -185,10 +194,10 @@ ul {
 .header__logo-container::before {
   position: absolute;
   top: 0;
-  left: 25%;
+  left: 3rem;
   content: '';
   width: 0.3125rem;
-  height: 7.5rem;
+  height: 4.5rem;
   background-color: var(--clr-base);
 }
 
@@ -196,14 +205,107 @@ ul {
   z-index: 1;
 }
 
-.nav {
+.header__logo svg {
+  width: 8rem;
+  height: 2rem;
+}
+
+.header__hamburger-btn {
+  width: 2rem;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: var(--br-s);
+  transition: var(--tr-gentle);
+}
+
+.header__hamburger-btn:hover {
+  background-color: var(--clr-hl-low);
+}
+
+.header__hamburger-btn:focus {
+  outline: 3px solid var(--clr-foam);
+}
+
+.header__hamburger-btn svg {
+  width: 1.25rem;
+  aspect-ratio: 1 / 1;
+  color: var(--clr-text);
+  fill: var(--clr-text);
+}
+
+.header__hamburger-btn svg:last-of-type {
+  display: none;
+}
+
+.header__hamburger-btn--close svg:first-of-type {
+  display: none;
+}
+
+.header__hamburger-btn--close svg:last-of-type {
+  display: block;
 }
 
 @media screen and (min-width: 1024px) {
-  .nav {
+  .header {
+    height: 7.5rem;
+    padding-inline: 23.875rem 1.25rem;
+    margin-block: 3.75rem;
+  }
+
+  .header__logo-container {
+    width: 33.33%;
+    height: 7.5rem;
+    padding-inline: 1.25rem;
+  }
+
+  .header__logo-container::before {
+    left: 4.1rem;
+    height: 7.5rem;
+  }
+
+  .header__logo svg {
+    height: 3.75rem;
+  }
+
+  .header__hamburger-btn {
+    display: none;
+  }
+}
+
+.nav {
+  align-items: center;
+}
+
+.header .nav {
+  width: 15rem;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  display: none;
+  background-color: var(--clr-surface);
+  padding: 1rem;
+  border: var(--border-container);
+  border-radius: var(--br-l);
+}
+
+.header .nav--display {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .header .nav {
+    width: 100%;
+    display: flex;
     justify-content: flex-end;
+    position: relative;
+    top: auto;
+    right: auto;
+    background-color: transparent;
+    border: transparent;
   }
 }
 
@@ -213,13 +315,15 @@ ul {
   gap: 0.625rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .nav__list {
     flex-direction: row;
+    align-items: center;
   }
 }
 
 .nav__link {
+  display: block;
   text-transform: uppercase;
   padding: 0.3125rem 0.9375rem;
   border-radius: 0.3125rem;
@@ -228,13 +332,24 @@ ul {
 
 .nav__link:hover {
   text-decoration: none;
-  background-color: var(--clr-surface);
+  background-color: var(--clr-overlay);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__link {
+    display: inline-block;
+  }
+
+  .nav__link:hover {
+    background-color: var(--clr-surface);
+  }
 }
 
 .nav__link-btn {
-  display: inline-flex;
+  display: flex;
+  gap: 0.5rem;
   background-color: var(--clr-surface);
-  padding: 0.625rem 1.875rem;
+  padding: 0.625rem 1rem;
   border: 1px solid var(--clr-hl-high);
   border-radius: 0.3125rem;
   margin-block: auto;
@@ -243,8 +358,19 @@ ul {
 
 .nav__link-btn:hover {
   background-color: var(--clr-overlay);
-  /* border-color: var(--clr-overlay); */
   text-decoration: none;
+}
+
+.nav__link-btn svg {
+  width: 1rem;
+  fill: var(--clr-hl-high);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__link-btn {
+    display: inline-flex;
+    padding: 0.625rem 1.875rem;
+  }
 }
 
 .hero {
