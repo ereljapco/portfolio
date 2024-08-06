@@ -566,35 +566,60 @@ button {
 }
 
 .projects {
-  max-width: 77.25rem;
+  width: var(--width);
+  max-width: var(--max-width);
   margin-inline: auto;
   margin-bottom: 9.5rem;
 }
 
 .projects__title {
-  font-size: 3.125rem;
+  font-size: 2rem;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .projects__title {
+    font-size: 3.125rem;
+  }
+}
+
 .projects__container {
   display: flex;
-  gap: 1.25rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .projects__container {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
 }
 
 .project {
+  width: 100%;
+  max-width: 25rem;
   position: relative;
   display: flex;
   flex-direction: column;
-  width: calc(100% / 3);
   background-color: var(--clr-surface);
-  padding-block: 3.75rem 5.4375rem;
-  padding-block: 3.75rem 4rem;
-  padding-inline: 2.8125rem;
+  padding-block: 2rem 4rem;
+  padding-inline: 1.25rem;
   border-radius: var(--br-m);
   transition: var(--tr-gentle-out);
+}
+
+@media screen and (min-width: 1024px) {
+  .project {
+    width: calc(100% / 3);
+    padding-block: 3.75rem 4rem;
+    padding-inline: 2.8125rem;
+  }
 }
 
 .project__subtitle-container {
@@ -621,6 +646,7 @@ button {
   align-items: center;
   justify-content: center;
   width: 3.125rem;
+  height: 3.125rem;
   border: 3px solid var(--clr-hl-high);
   border-radius: var(--br-s);
 }
@@ -651,10 +677,14 @@ button {
 
 .project__tags {
   display: flex;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .project__tag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   color: var(--clr-base);
   font-size: 0.75rem;
   font-weight: 800;
@@ -664,6 +694,10 @@ button {
   border-radius: var(--br-s);
   padding: 0.625rem 1.125rem;
   padding: 5px 10px;
+}
+
+.project__tag svg {
+  height: 0.75rem;
 }
 
 .project__links {
