@@ -374,12 +374,14 @@ button {
 }
 
 .hero {
-  max-width: 77.25rem;
+  width: var(--width);
+  max-width: var(--max-width);
   display: flex;
-  gap: 7.5625rem;
+  gap: 3rem;
   align-items: center;
   justify-content: flex-end;
   text-align: right;
+  padding-right: 1.25rem;
   margin-inline: auto;
   margin-bottom: 8.75rem;
 }
@@ -403,6 +405,25 @@ button {
 .hero__copy {
   width: 17.8125rem;
   margin-bottom: 3.5rem;
+}
+
+.hero__illustration {
+  width: 62.5%;
+  display: none;
+}
+
+.hero__illustration svg {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-right: 0;
+  }
+
+  .hero__illustration {
+    display: block;
+  }
 }
 
 .about {
