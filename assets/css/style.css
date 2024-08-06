@@ -492,15 +492,24 @@ button {
 }
 
 .skills {
+  width: var(--width);
+  max-width: var(--max-width);
+  margin-inline: auto;
   margin-bottom: 8.75rem;
 }
 
 .skills__title {
-  font-size: 3.125rem;
+  font-size: 2rem;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .skills__title {
+    font-size: 3.125rem;
+  }
 }
 
 .skills__grid {
