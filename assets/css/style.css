@@ -729,8 +729,8 @@ button {
 }
 
 .contact {
+  width: var(--width);
   position: relative;
-  max-width: 70rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -743,9 +743,23 @@ button {
   margin-bottom: 4rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .contact {
+    width: 70%;
+    max-width: 70rem;
+  }
+}
+
 .contact__title {
-  font-size: 3.125rem;
+  font-size: 2rem;
+  text-align: center;
   color: var(--clr-foam);
+}
+
+@media screen and (min-width: 768px) {
+  .contact__title {
+    font-size: 3.125rem;
+  }
 }
 
 .contact__copy {
